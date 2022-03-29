@@ -7,7 +7,7 @@ int** build_bijection(int** p) {
 
 	int* T[9];
 	int i = 0;
-	// Faut qu'on ait une liste des nombres déj)à tiré
+	// Faut qu'on ait une liste des nombres déjà tiré
 	while (i<9) {
 		T[i] = i;
 		i ++;
@@ -16,10 +16,29 @@ int** build_bijection(int** p) {
 	i = 0;
 	int j;
 	while (i<9) {
-		rand()/(9-i)
+		j = rand()/(9-i);
+		p[i] = j;
+
+		print_tableau(T,9);
+		print_tableau(p,9);
+
+		while (j<8-i) {
+			T[j] = T[j+1];
+			j++;
+		}
 	}
 }
 
+
+void print_tableau (int** p, int n) {
+	int i = 0;
+
+	while (i<n) {
+		printf("%d;",p[i]);
+		i++;
+	}
+
+} 
 
 int main () {
 	int area [9][9];
