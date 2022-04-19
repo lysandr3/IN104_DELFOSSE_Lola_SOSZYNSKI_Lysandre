@@ -185,8 +185,63 @@ int main () {
 
 	print_grid(area);
 
+	int* tested = malloc(81*10*sizeof(int));	
+
+	int* diago = malloc(81*sizeof(int));
+
+	i = 0;
+	while (i<81) {
+		if (area[i] != 0) {
+			diago[i] = 1;
+		}
+
+		else {
+			diago[i] = 0;
+		}
+
+		i++;
+	}
+
+	i = 0;
+	int j = 0;
+
+	// fonction 
+
+void remplir(int i) {
+
+	if (diago[i] == 1) {
+		remplir(i+1)
+	}
+
+	else if (i<81) {
+		// Si possibilitée est vide 
+
+	}
+}
+
+int poss_empty
+
+	while (i<81) {
+		if (area[i] == 0) {
+			j = 0;
+			while(j<10) {
+				if 
+				if ((tested[i*10+j] == 0) and (possible[i*10+j] == 1)) {
+					area[i] = j;
+					tested[i*10+j] = 1;
+				}
+			}
+		}
+		i++;
+	}
+
 	// Pour chaque case vide, on va la remplir aléatoirement parmi ses possibilités
 	// On met à jour les possibilités puis la grille et on continue jusqu'a avoir un pb i.e s=9 qq part
 	// A ce moment la, ça devient plus complexe 
+
+	// Parcourir les cases vides, tableau qui indiques quelles possibilitées ont été testé, une copie de possibilities avec des 1 la où ça a été testé
+
+
+
 
 }
